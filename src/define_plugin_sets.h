@@ -19,9 +19,6 @@ To create/register a plugin, you have to :
  When found stable enought, the maintainer (and only him) will choose to move it to TESTING or STABLE
 */
 
-
-
-
 /******************************************************************************\
  * BUILD Configs *******************************************************************
 \******************************************************************************/
@@ -203,9 +200,16 @@ To create/register a plugin, you have to :
         #undef ESP8266
     #endif
     #define PLUGIN_SET_ONLY_SWITCH
+    #define PLUGIN_SET_ONLY_TEMP_HUM
+
     #define USES_P036   // FrameOLED
     #define USES_P027   // INA219
     #define USES_P028   // BME280
+    #define USES_P014   // Si7021
+
+    #define USES_P214   // Atlas PH
+    #define USES_P215   // Atlas EC
+    #define USES_P216   // Atlas ORP
 
     // TODO : Add list of compatible plugins for ESP32 board.
 #endif
